@@ -1,0 +1,6 @@
+Django
+psycopg2-binary
+python-dotenv
+stripe
+django-htmx
+whitenoise
