@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Organization Sign Up - NoteKeeper{% endblock %}
+
+{% block content %}
+<div class="flex min-h-screen items-center justify-center">
+    <div class="w-full max-w-md bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Organization Sign Up</h2>
+        <form method="post" class="space-y-6">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-md">
+                Create Organization
+            </button>
+        </form>
+        <div class="mt-4 text-center">
+            <a href="{% url 'accounts:login' %}" class="text-blue-600 hover:text-blue-800">Already have an account? Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
